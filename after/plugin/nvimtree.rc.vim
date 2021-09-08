@@ -96,3 +96,5 @@ g.nvim_tree_bindings = {
 }
 
 EOS
+
+nnoremap <C-n> :NvimTreeToggle<CR>

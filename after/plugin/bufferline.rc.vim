@@ -1,5 +1,4 @@
 lua << EOS
-
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then return end
 
@@ -38,13 +37,11 @@ local colors = {
    folder_bg = "#83a598",
 }
 
-
 bufferline.setup {
    options = {
       offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
       buffer_close_icon = "",
       modified_icon = "",
-      -- close_icon = "%@NvChad_bufferline_quitvim@%X",
       close_icon = "",
       show_close_icon = true,
       left_trunc_marker = "",
@@ -172,3 +169,6 @@ bufferline.setup {
 }
 
 EOS
+
+nnoremap <silent><C-Tab> :BufferLineCycleNext<CR>
+nnoremap <silent><C-w> :bdelete<CR>
