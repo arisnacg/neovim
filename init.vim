@@ -20,14 +20,14 @@ set nowrap
 " No swap
 set noswapfile
 set nobackup
-set undodir=$HOME/.vim/undodir
+set undodir=~/.vim/undodir
 set undofile
 
 " Increment search
 set incsearch
 
 " Scroll off
-set scrolloff=12
+set scrolloff=10
 
 " Term GUI Colors
 set termguicolors
