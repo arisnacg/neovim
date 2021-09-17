@@ -1,3 +1,4 @@
+
 lua << EOS
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then return end
@@ -41,8 +42,7 @@ bufferline.setup {
       end,
    },
 }
-
 EOS
 
-nnoremap <silent><C-Tab> :BufferLineCycleNext<CR>
-nnoremap <silent><leader>c :bdelete<CR>
+nnoremap <silent><tab> :BufferLineCycleNext<CR>
+nnoremap <silent><leader>d :bdelete<CR>

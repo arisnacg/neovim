@@ -1,5 +1,5 @@
-" Use .vimrc on spesific project
 set exrc
+" Use .vimrc on spesific project
 
 " Relative line number
 set relativenumber
@@ -26,6 +26,9 @@ set undofile
 " Increment search
 set incsearch
 
+" Sign column
+set signcolumn=yes
+
 " Scroll off
 set scrolloff=10
 
@@ -45,7 +48,14 @@ let mapleader = " "
 nnoremap <leader>rc :e $MYVIMRC<CR>
 
 " Source my vimrc
-nnoremap <leader>rv :source $MYVIMRC<CR>
+nnoremap <leader>rv :source %<CR>
+
+" Write file
+nnoremap <leader>wf :w<CR>
+nnoremap <leader>wq :wq<CR>
+
+" Quit vim
+nnoremap <leader>qq :q!<CR>
 
 " Mapping insert mode
 inoremap jj <ESC>
@@ -74,9 +84,9 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " Moving text in every mode
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==<ins>
+inoremap <C-k> <esc>:m .-2<CR>==<ins>
 nnoremap <leader>j :m .+1<CR>==
-inoremap <C-k> <ESC>:m .-2<CR>==i
-inoremap <C-j> <ESC>:m .+1<CR>==i
 nnoremap <leader>k :m .-2<CR>==
 
 " Mapping visual mode
@@ -110,7 +120,8 @@ nmap <C-j> <C-d>
 nmap <C-k> <C-u>
 
 " Add a line without insert mode
-nnoremap <silent><leader>o :set paste<CR>m`O<Esc>``:set nopaste<CR>
+nnoremap <silent><leader>o :set paste<CR>m`O<esc>``:set nopaste<CR>
 
 " Import Plugin
 runtime ./plugin.vim
+
