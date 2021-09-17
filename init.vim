@@ -41,6 +41,8 @@ set smartindent
 " Leader key
 let mapleader = " "
 
+" Edit my vimrc
+nnoremap <leader>rc :e $MYVIMRC<CR>
 
 " Source my vimrc
 nnoremap <leader>rv :source $MYVIMRC<CR>
@@ -76,9 +78,6 @@ nnoremap <leader>j :m .+1<CR>==
 inoremap <C-k> <ESC>:m .-2<CR>==i
 inoremap <C-j> <ESC>:m .+1<CR>==i
 nnoremap <leader>k :m .-2<CR>==
-
-function
-endfun
 
 " Mapping visual mode
 vnoremap K :m '<-2<CR>gv=gv
