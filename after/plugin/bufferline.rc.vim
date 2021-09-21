@@ -44,5 +44,5 @@ bufferline.setup {
 }
 EOS
 
-nnoremap <silent><tab> :BufferLineCycleNext<CR>
-nnoremap <silent><leader>d :bdelete<CR>
+nnoremap <silent>tt :BufferLineCycleNext<CR>
+nnoremap <silent><leader>bd :bdelete<CR>

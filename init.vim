@@ -15,7 +15,7 @@ set hidden
 set noerrorbells
 
 " No Wrap
-set nowrap
+set wrap
 
 " No swap
 set noswapfile
@@ -59,7 +59,7 @@ nnoremap <leader>qq :q!<CR>
 
 " Mapping insert mode
 inoremap jj <ESC>
-inoremap jj <ESC>
+inoremap JJ <ESC>
 
 " Yank until the of the line
 nnoremap Y y$
@@ -118,6 +118,9 @@ nnoremap t<down> <C-w>-
 " Scrolling
 nmap <C-j> <C-d>
 nmap <C-k> <C-u>
+
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Add a line without insert mode
 nnoremap <silent><leader>o :set paste<CR>m`O<esc>``:set nopaste<CR>

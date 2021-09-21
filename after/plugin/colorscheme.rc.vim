@@ -3,6 +3,8 @@ colorscheme tokyonight
 hi Normal guibg=None
 hi Command guibg=None
 hi SignColumn guibg=None
+hi NvimTreeNormal guibg=None
+hi TelescopeNormal guibg=None
 
 " Tokyo Night
 let g:tokyonight_style = "night"
