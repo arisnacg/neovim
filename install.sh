@@ -1,5 +1,5 @@
 #! /bin/bash
-nvim_dir="~/.config/nvim"
+nvim_dir="$HOME/.config/nvim"
 if [ -d $nvim_dir ] 
 then
   mv -f ~/.config/nvim ~/.config/nvim.backup
