@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Colorscheme
   {
      "folke/tokyonight.nvim",
     lazy = false,
@@ -21,4 +22,16 @@ require("lazy").setup({
       vim.cmd.colorscheme 'tokyonight-night'
     end,
   },
+   -- Autocompletion
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
+    },
+  },
+  -- Comment
+  { 'numToStr/Comment.nvim', opts = {} },
+  -- Vim Suround
+  'tpope/vim-surround'
 })
