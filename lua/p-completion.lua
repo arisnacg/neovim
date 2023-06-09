@@ -1,10 +1,11 @@
 local status_ok, cmp = pcall(require, "cmp")
+
 if not status_ok then
   return
 end
 
 local kind_icons = {
-  Text = "",
+  Text = "󰗴ext",
 }
 
 cmp.setup {
@@ -27,7 +28,12 @@ cmp.setup {
   formatting = {
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      -- vim_item.menu = ({
+      --   nvim_lsp = "[LSP]",
+      --   buffer = "[Buff]",
+      --   path = "[Path]",
+      -- })[entry.source.name]
       return vim_item
     end,
   },
@@ -40,7 +46,7 @@ cmp.setup {
     select = false,
   },
   window = {
-    -- completion = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(),
     documentation = false
   },
   experimental = {

@@ -45,6 +45,6 @@ vim.o.timeoutlen = 300
 vim.cmd "autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o"
 -- Disable underline on matching bracket
 vim.cmd "highlight MatchParen gui=none"
--- Dsable italic
+-- Disable italic
 vim.cmd "highlight Normal gui=none"
 vim.cmd "highlight Comment gui=none"

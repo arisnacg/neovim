@@ -14,20 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {
   install = {
     missing = true,
-    colorscheme = { "tokyonight" },
   },
 }
 
 require("lazy").setup({
+  -- Colorscheme
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- Icons
   'nvim-tree/nvim-web-devicons',
-  -- Colorscheme
-  {
-     "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
    -- Autocompletion
   {
     'hrsh7th/nvim-cmp',
