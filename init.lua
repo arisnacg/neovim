@@ -1,3 +1,8 @@
+-- Built-in
+require "keymap"
+require "autocmd"
+require "setting"
+
 -- Plugin
 require "plugin"
 require "p-color"
@@ -7,7 +12,3 @@ require "p-statusline"
 require "p-treesitter"
 require "p-tab"
 
--- Built-in
-require "keymap"
-require "autocmd"
-require "setting"

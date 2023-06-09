@@ -30,8 +30,6 @@ require("lazy").setup({
       'hrsh7th/cmp-path',
     },
   },
-  -- Comment
-  { 'numToStr/Comment.nvim', opts = {} },
   -- Auto pair
   'windwp/nvim-autopairs',
   -- Vim Suround
@@ -48,5 +46,7 @@ require("lazy").setup({
     'nvim-treesitter/nvim-treesitter',
   },
   -- Tab
-  'kdheepak/tabline.nvim'
+  'kdheepak/tabline.nvim',
+  -- Comment
+  { 'numToStr/Comment.nvim', opts = {} },
 }, opts)
