@@ -4,7 +4,8 @@ require "p-completion"
 require "p-autopair"
 require "p-statusline"
 require "p-treesitter"
--- Basic
+
+-- Built-in
 require "setting"
 require "keymap"
 require "autocmd"
