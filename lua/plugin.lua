@@ -33,5 +33,12 @@ require("lazy").setup({
   -- Comment
   { 'numToStr/Comment.nvim', opts = {} },
   -- Vim Suround
-  'tpope/vim-surround'
+  'tpope/vim-surround',
+  -- Status line
+  -- Lualine
+  {
+    'nvim-lualine/lualine.nvim',
+    -- See `:help lualine.txt`
+    opts = {},
+  },
 })
