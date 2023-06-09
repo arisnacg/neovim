@@ -5,7 +5,7 @@ end
 
 treesitter.setup {
   ensure_installed = {'yaml', 'dockerfile', 'terraform'},
-  auto_install = true,
+  auto_install = false,
   highlight = { enable = true },
   indent = {
     enable = true,
