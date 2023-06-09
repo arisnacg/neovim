@@ -32,13 +32,13 @@ require("lazy").setup({
   },
   -- Comment
   { 'numToStr/Comment.nvim', opts = {} },
+  -- Auto pair
+  'windwp/nvim-autopairs',
   -- Vim Suround
   'tpope/vim-surround',
   -- Status line
-  -- Lualine
   {
     'nvim-lualine/lualine.nvim',
-    -- See `:help lualine.txt`
     opts = {},
   },
 })
