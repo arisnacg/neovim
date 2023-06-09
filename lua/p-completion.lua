@@ -1,5 +1,9 @@
 local cmp = require 'cmp'
 
+local kind_icons = {
+  Text = "",
+}
+
 cmp.setup {
   mapping = cmp.mapping.preset.insert {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -20,11 +24,7 @@ cmp.setup {
   formatting = {
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
-      vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-        buffer = "[Buffer]",
-        path = "[Path]",
-      })[entry.source.name]
+      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       return vim_item
     end,
   },
@@ -37,7 +37,7 @@ cmp.setup {
     select = false,
   },
   window = {
-    completion = cmp.config.window.bordered(),
+    -- completion = cmp.config.window.bordered(),
     documentation = false
   },
   experimental = {
