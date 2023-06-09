@@ -11,6 +11,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+local opts = {
+  install = {
+    missing = true,
+    colorscheme = { "tokyonight" },
+  },
+}
+
 require("lazy").setup({
   -- Colorscheme
   {
@@ -41,4 +48,11 @@ require("lazy").setup({
     'nvim-lualine/lualine.nvim',
     opts = {},
   },
-})
+  -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-sleuth',
+  -- Treesitter
+  {
+    'nvim-treesitter/nvim-treesitter',
+  },
+
+}, opts)
