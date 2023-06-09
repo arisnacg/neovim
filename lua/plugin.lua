@@ -19,15 +19,14 @@ local opts = {
 }
 
 require("lazy").setup({
+  -- Icons
+  'nvim-tree/nvim-web-devicons',
   -- Colorscheme
   {
      "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     opts = {},
-    config = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-    end,
   },
    -- Autocompletion
   {
@@ -54,5 +53,6 @@ require("lazy").setup({
   {
     'nvim-treesitter/nvim-treesitter',
   },
-
+  -- Tab
+  'kdheepak/tabline.nvim'
 }, opts)

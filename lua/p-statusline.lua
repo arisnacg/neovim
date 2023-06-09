@@ -10,7 +10,12 @@ end
 local branch = {
   "branch",
   icons_enabled = true,
-  icon = "",
+  icon = "",
+}
+
+local filetype = {
+  "filetype",
+  colored = false
 }
 
 lualine.setup({
@@ -25,8 +30,8 @@ lualine.setup({
   sections = {
     lualine_a = { "mode"},
     lualine_b = {branch},
-    lualine_c = {'filename'},
-    lualine_x = {'filetype'},
+    lualine_c = {},
+    lualine_x = {filetype},
     lualine_y = { },
   },
   tabline = {},

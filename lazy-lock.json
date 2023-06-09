@@ -7,6 +7,8 @@
   "nvim-autopairs": { "branch": "master", "commit": "59df87a84c80a357ca8d8fe86e451b93ac476ccc" },
   "nvim-cmp": { "branch": "main", "commit": "b5a636d46c69bb371995c22d7a10ee1544004879" },
   "nvim-treesitter": { "branch": "master", "commit": "5944fc821ac590ddb8073b3f9243a432105237b0" },
+  "nvim-web-devicons": { "branch": "master", "commit": "2a125024a137677930efcfdf720f205504c97268" },
+  "tabline.nvim": { "branch": "main", "commit": "1f77f520249d508eebff462e103ed699ecf5dc5f" },
   "tokyonight.nvim": { "branch": "main", "commit": "161114bd39b990995e08dbf941f6821afbdcd666" },
   "vim-sleuth": { "branch": "master", "commit": "1cc4557420f215d02c4d2645a748a816c220e99b" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
