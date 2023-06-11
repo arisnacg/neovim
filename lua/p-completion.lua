@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 local kind_icons = {
-  Text = "󰗴ext",
+  Text = "󱀍",
 }
 
 cmp.setup {
@@ -26,7 +26,7 @@ cmp.setup {
   },
 
   formatting = {
-    fields = { "abbr", "kind", "menu" },
+    fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
       -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       -- vim_item.menu = ({
