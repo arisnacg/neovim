@@ -12,4 +12,3 @@ require "p-autopair"
 require "p-statusline"
 require "p-treesitter"
 require "p-tab"
-

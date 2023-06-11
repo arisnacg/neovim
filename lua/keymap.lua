@@ -21,12 +21,14 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 -- Insert --
-
 -- Press jj fast to enter
 keymap("i", "jj", "<ESC>", opts)
 keymap("i", "JJ", "<ESC>", opts)
 
 -- Normal --
+
+-- Disable recording
+keymap("n", "q", "<Nop>", opts)
 
 -- File explorer
 -- keymap("n", "-", ":Ex<CR>", opts)

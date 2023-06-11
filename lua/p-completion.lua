@@ -5,8 +5,11 @@ if not status_ok then
 end
 
 local kind_icons = {
-  Text = "󱀍",
+  Text = "󰦨",
+  File = "󰈔",
+  Folder = "",
 }
+
 
 cmp.setup {
   mapping = cmp.mapping.preset.insert {
@@ -26,14 +29,15 @@ cmp.setup {
   },
 
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = {"kind", "abbr", "menu" },
     format = function(entry, vim_item)
-      vim_item.kind = string.format("%s ", kind_icons[vim_item.kind])
-      -- vim_item.menu = ({
-      --   nvim_lsp = "[LSP]",
-      --   buffer = "[Buff]",
-      --   path = "[Path]",
-      -- })[entry.source.name]
+      -- vim_item.kind = string.format(" %s %s", kind_icons[vim_item.kind], vim_item.kind)
+      vim_item.kind = kind_icons[vim_item.kind]
+      vim_item.menu = ({
+        nvim_lsp = "[LSP]",
+        buffer = "[Buff]",
+        path = "[Path]",
+      })[entry.source.name]
       return vim_item
     end,
   },

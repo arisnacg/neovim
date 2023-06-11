@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 colorscheme.setup{
+  transparent = true,
   styles = {
     comments = { italic = false},
     keywords = { italic = false },
