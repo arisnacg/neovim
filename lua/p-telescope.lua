@@ -12,7 +12,7 @@ telescope.setup{
     file_sorter = require("telescope.sorters").get_fzy_sorter,
     color_devicons = true,
     file_ignore_patterns = {
-      ".git", "node_modules", "build", "dist", "yarn.lock", "lazy.lock.json"
+      ".git", "node_modules", "build", "dist", "yarn.lock", "lazy.lock.json" 
     },
     mappings = {
       i = {
@@ -30,12 +30,7 @@ telescope.setup{
   pickers = {
     find_files = {
       theme = "dropdown",
-    }
-  },
-  pickers = {
-    find_files = {
-      theme = "dropdown",
-    }
+    },
   },
 }
 
