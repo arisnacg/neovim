@@ -28,7 +28,7 @@ cmp.setup {
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
-      -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format("%s ", kind_icons[vim_item.kind])
       -- vim_item.menu = ({
       --   nvim_lsp = "[LSP]",
       --   buffer = "[Buff]",
@@ -46,7 +46,7 @@ cmp.setup {
     select = false,
   },
   window = {
-    completion = cmp.config.window.bordered(),
+    -- completion = cmp.config.window.bordered(),
     documentation = false
   },
   experimental = {

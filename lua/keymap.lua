@@ -29,7 +29,7 @@ keymap("i", "JJ", "<ESC>", opts)
 -- Normal --
 
 -- File explorer
-keymap("n", "<leader>e", ":Ex<CR>", opts)
+-- keymap("n", "-", ":Ex<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -73,7 +73,7 @@ keymap("n", "<leader>sc", ":nohl<CR>", opts)
 -- Visual --
 
 -- Cursor stay after yank
--- keymap("v", "y", "ygv<esc>", opts)
+keymap("x", "y", "ygv<esc>", opts)
 
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)

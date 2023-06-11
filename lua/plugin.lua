@@ -19,7 +19,12 @@ local opts = {
 
 require("lazy").setup({
   -- Colorscheme
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   -- Icons
   'nvim-tree/nvim-web-devicons',
    -- Autocompletion
@@ -32,6 +37,8 @@ require("lazy").setup({
   },
   -- Auto pair
   'windwp/nvim-autopairs',
+  -- Multi cursor
+  { 'mg979/vim-visual-multi',        branch = 'master' },
   -- Vim Suround
   'tpope/vim-surround',
   -- Status line
@@ -49,4 +56,9 @@ require("lazy").setup({
   'kdheepak/tabline.nvim',
   -- Comment
   { 'numToStr/Comment.nvim', opts = {} },
+  -- File explorer
+  {
+    'stevearc/oil.nvim',
+    opts = {},
+  }
 }, opts)

@@ -6,6 +6,7 @@ require "setting"
 -- Plugin
 require "plugin"
 require "p-color"
+require "p-fileex"
 require "p-completion"
 require "p-autopair"
 require "p-statusline"
