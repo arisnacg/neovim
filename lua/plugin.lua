@@ -27,18 +27,21 @@ require("lazy").setup({
   },
   -- Icons
   'nvim-tree/nvim-web-devicons',
-   -- Autocompletion
+  -- Autocompletion
   {
     'hrsh7th/nvim-cmp',
     dependencies = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
+      'hrsh7th/cmp-nvim-lsp',
+      'L3MON4D3/LuaSnip',
+      'saadparwaiz1/cmp_luasnip'
     },
   },
   -- Auto pair
   'windwp/nvim-autopairs',
   -- Multi cursor
-  { 'mg979/vim-visual-multi',        branch = 'master' },
+  { 'mg979/vim-visual-multi', branch = 'master' },
   -- Vim Suround
   'tpope/vim-surround',
   -- Status line
@@ -55,7 +58,7 @@ require("lazy").setup({
   -- Tab
   'kdheepak/tabline.nvim',
   -- Comment
-  { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim',  opts = {} },
   -- File explorer
   {
     'stevearc/oil.nvim',
@@ -63,11 +66,19 @@ require("lazy").setup({
   },
   -- Telescope
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   -- LSP
-  "neovim/nvim-lspconfig",
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
+  {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+      -- Additional neovim configuration LSP
+      'folke/neodev.nvim',
+    },
+  },
 }, opts)

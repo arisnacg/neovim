@@ -14,4 +14,3 @@ require "p-treesitter"
 require "p-tab"
 require "p-telescope"
 require "p-lsp"
-
