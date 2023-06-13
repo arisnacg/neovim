@@ -1,7 +1,7 @@
--- Built-in
+-- Builtin
+require "setting"
 require "keymap"
 require "autocmd"
-require "setting"
 
 -- Plugin
 require "plugin"
@@ -13,3 +13,5 @@ require "p-statusline"
 require "p-treesitter"
 require "p-tab"
 require "p-telescope"
+require "p-lsp"
+
